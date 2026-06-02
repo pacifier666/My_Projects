@@ -37,9 +37,9 @@ def play_game():
             print(f"Поздравляю! Вы угадали число {secret_number} за {attempts} попыток!")
             return
         elif guess < secret_number:
-            print("Слишком маленькое число.")
+            print("Загаданное число больше.")
         else:
-            print("Слишком большое число.")
+            print("Загаданное число меньше.")
 
     print(f"\nК сожалению, попытки закончились. Загаданное число было {secret_number}.")
 
