@@ -98,10 +98,10 @@ class GuessGame:
             messagebox.showinfo("Победа!", f"Поздравляю! Вы угадали число {self.secret} за {self.attempts} попыток.")
             self.new_game()
         elif guess < self.secret:
-            self.label_hint.config(text="Слишком маленькое число", fg="red")
+            self.label_hint.config(text="Загаданное число больше", fg="red")
             self.update_history(guess, "мало")
         else:
-            self.label_hint.config(text="Слишком большое число", fg="red")
+            self.label_hint.config(text="Загаданное число меньше", fg="red")
             self.update_history(guess, "много")
 
         if self.attempts >= self.max_attempts and guess != self.secret:
